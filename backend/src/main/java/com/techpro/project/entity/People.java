@@ -1,19 +1,7 @@
 package com.techpro.project.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Getter
 @Setter
@@ -23,29 +11,59 @@ import javax.persistence.GenerationType;
 @AllArgsConstructor
 @Builder
 
-
 @Table(name = "people")
 public class People {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name = "PersonID")
-    private int PersonID;
-
+    private int personId;
     @Column(name = "FirstName")
-    private String FirstName;
+    private  String firstName;
+    @Column(name = "LastName")
+    private String lastName;
+    @Column(name = "Email")
+    private String email;
 
-    @Column(name = "LastName" )
-    private String LastName;
 
-    @Column(name = "Email" )
-    private String Email;
 
-    public People(String name) {
-        this.FirstName = name;
+    public int getPersonId() {
+
+        return personId;
     }
+
+    public void setPersonId(int personId) {
+
+        this.personId = personId;
+    }
+
+    public String getFirstName() {
+
+        return firstName;
+    }
+
     public void setFirstName(String firstName) {
-        this.FirstName = firstName;
+
+        this.firstName = firstName;
     }
 
+    public String getLastName() {
+
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+
+        return email;
+    }
+
+    public void setEmail(String email) {
+
+        this.email = email;
+    }
 }
