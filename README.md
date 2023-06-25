@@ -16,8 +16,7 @@ To get started with the Spring Boot and React CRUD application, follow the steps
 
 Clone the repository or download the source code.
 
-git clone <repository_url>
-
+git clone https://github.com/KostasTheG/Final_Project.git
 
 Spring Boot and React CRUD Application
 This is a README file for a CRUD (Create, Read, Update, Delete) application built using Spring Boot and React. This application demonstrates the integration of a backend API built with Spring Boot and a frontend user interface developed with React. The application allows users to perform CRUD operations on a specific resource.
