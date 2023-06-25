@@ -13,7 +13,7 @@ To get started with the Spring Boot and React CRUD application using Docker, fol
 
 Clone the repository or download the source code.
 
-git clone 
+git clone https://github.com/KostasTheG/Final_Project.git
 
 Build and Run the Docker Containers
 
