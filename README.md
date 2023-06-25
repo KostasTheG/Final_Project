@@ -54,17 +54,22 @@ spring-boot-react-crud/
 The backend folder contains the Spring Boot application source code and a Dockerfile to build the backend Docker image.
 The frontend folder contains the React application source code, public assets, and a Dockerfile to build the frontend Docker image.
 The docker-compose.yml file defines the services, networking, and configurations for running the backend and frontend containers.
+
 Additional Notes
+
 The backend API endpoints can be defined in the Spring Boot controllers.
 The frontend React components can be modified in the React application's source code.
 Customize the frontend user interface as per your requirements using React components, styles, and routing.
 Ensure that the necessary environment variables, such as database connection details, are properly configured in the respective Dockerfiles or passed as environment variables in the Docker Compose file.
+
 Resources
+
 Spring Boot Documentation
 React Documentation
 Docker Documentation
 
 License
+
 This project is licensed under the MIT License.
 
 Feel free to modify and use this application as a starting point for your own projects.
