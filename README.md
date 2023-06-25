@@ -33,8 +33,11 @@ The Docker Compose file (docker-compose.yml) will spin up two containers, one fo
 Access the Application
 
 Open your web browser and visit http://localhost:3000 to access the React frontend.
+
 The application will allow you to perform CRUD operations on the specified resource.
+
 Folder Structure
+
 The project structure of the Spring Boot and React CRUD application with Docker may look as follows:
 
 spring-boot-react-crud/
@@ -58,8 +61,11 @@ The docker-compose.yml file defines the services, networking, and configurations
 Additional Notes
 
 The backend API endpoints can be defined in the Spring Boot controllers.
+
 The frontend React components can be modified in the React application's source code.
+
 Customize the frontend user interface as per your requirements using React components, styles, and routing.
+
 Ensure that the necessary environment variables, such as database connection details, are properly configured in the respective Dockerfiles or passed as environment variables in the Docker Compose file.
 
 Resources
