@@ -17,7 +17,7 @@ export default function Navbar() {
                     aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-
+                
                 <Link className='btn btn-outline-dark' to="/addpeople">Add User</Link>
             </div>
         </nav>

@@ -22,6 +22,7 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "OrderID")
     private int orderId;
+
     @Column(name = "PersonID")
     private int personId;
     @Column(name = "OrderDate")

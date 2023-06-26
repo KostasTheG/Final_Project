@@ -17,7 +17,7 @@ public class OrdersController {
     private OrdersRepository ordersRepository;
 
     @PostMapping("/order")
-    Orders newUser(@RequestBody Orders newOrder){
+    Orders NewOrder(@RequestBody Orders newOrder){
         return ordersRepository.save(newOrder);
     }
 
@@ -27,10 +27,18 @@ public class OrdersController {
     }
 
     @GetMapping("/order/{id}")
-    Orders getUserById(@PathVariable int id){
+    Orders getOrderById(@PathVariable int id){
         return ordersRepository.findById(id).orElseThrow(()->new UserNotFoundException(id));
     }
 
+    @DeleteMapping("/order/{id}")
+    String deletePeople(@PathVariable int id){
+        if (!ordersRepository.existsById(id)){
+            throw new UserNotFoundException(id);
+        }
+        ordersRepository.deleteById(id);
+        return "Deleted successfully!";
+    }
 
 
 }

@@ -16,6 +16,7 @@ public class People {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+
     @Column(name = "PersonID")
     private int personId;
     @Column(name = "FirstName")
@@ -24,8 +25,6 @@ public class People {
     private String lastName;
     @Column(name = "Email")
     private String email;
-
-
 
     public int getPersonId() {
 

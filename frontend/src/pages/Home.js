@@ -43,7 +43,8 @@ export default function Home() {
               <td>{people.firstName}</td>
               <td>{people.lastName}</td>
               <td>{people.email}</td>              
-              <td>              
+              <td> 
+                <Link className='btn btn-outline-primary mx-3' to={"/addorders/" }>Order</Link>             
                 <Link className='btn btn-outline-primary mx-3' to={`/editpeople/${people.personId}`}>Edit</Link>
                 <button className='btn btn-danger mx-2' onClick={()=> peopleDelete(people.personId)}>Delete</button>
               </td>
