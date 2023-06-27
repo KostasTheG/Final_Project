@@ -1,7 +1,10 @@
 package com.techpro.project.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDateTime;
 
@@ -23,10 +26,15 @@ public class Orders {
     @Column(name = "OrderID")
     private int orderId;
 
-    @Column(name = "PersonID")
-    private int personId;
+//    @Column(name = "PersonID")
+//    private int personId;
     @Column(name = "OrderDate")
     private LocalDateTime orderDate;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "PersonID", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private People people;
 
 
     public int getOrderId() {
@@ -39,15 +47,15 @@ public class Orders {
         this.orderId = orderId;
     }
 
-    public int getPersonId() {
-
-        return personId;
-    }
-
-    public void setPersonId(int personId) {
-
-        this.personId = personId;
-    }
+//    public int getPersonId() {
+//
+//        return personId;
+//    }
+//
+//    public void setPersonId(int personId) {
+//
+//        this.personId = personId;
+//    }
 
     public LocalDateTime getOrderDate() {
 

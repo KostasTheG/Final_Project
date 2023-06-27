@@ -7,8 +7,8 @@ import org.springframework.core.env.ConfigurableEnvironment;
 public class DockerSecretsProcessor implements EnvironmentPostProcessor {
 
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
-        System.setProperty("MYSQL_HOST", "192.168.43.200");
+        System.setProperty("MYSQL_HOST", "192.168.");
         System.setProperty("MYSQL_USERNAME", "root");
-        System.setProperty("MYSQL_PASSWORD", "root");
+        System.setProperty("USERNAME", "root");
     }
 }
