@@ -10,9 +10,7 @@ export default function AddPeople() {
         firstname:"",
         lastname:"",
         email:"",
-        phone:"",
-        address:"",
-        zipcode:""
+        
     })
 
     const{firstName,lastName,email}=people
